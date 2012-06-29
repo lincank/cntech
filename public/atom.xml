@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2012-06-29T17:45:30+08:00</updated>
-  <id>http://yoursite.com/</id>
+  <title><![CDATA[Guimin's Blog]]></title>
+  <link href="http://cntech.lincank.info/atom.xml" rel="self"/>
+  <link href="http://cntech.lincank.info/"/>
+  <updated>2012-06-29T18:38:48+08:00</updated>
+  <id>http://cntech.lincank.info/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Guimin Lin/林桂民]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://cntech.lincank.info/blog/2012/06/29/hello-world/"/>
+    <updated>2012-06-29T18:34:00+08:00</updated>
+    <id>http://cntech.lincank.info/blog/2012/06/29/hello-world</id>
+    <content type="html"><![CDATA[<p>This is my first post here.</p>
+]]></content>
+  </entry>
   
 </feed>
