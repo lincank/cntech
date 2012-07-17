@@ -3,7 +3,7 @@ layout: post
 title: "作为一个程序员你应该混迹的地方"
 date: 2012-07-17 11:56
 comments: true
-categories: program, coding
+categories: program coding
 ---
 
 
