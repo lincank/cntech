@@ -55,6 +55,7 @@ Ubuntu下就很简单了，输入以下命令：
     ./build_firmware.sh output_directory/ working_directory/
 
 其中：
+
 * **output_directory**: 这是新固件输出文件夹，如果原来里面有东西的话会被覆盖掉
 * **working_directory**: 原来那个被修改的固件所在文件夹
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Guimin's Blog]]></title>
   <link href="http://cntech.lincank.info/atom.xml" rel="self"/>
   <link href="http://cntech.lincank.info/"/>
-  <updated>2012-07-19T16:32:12+08:00</updated>
+  <updated>2012-07-19T20:13:36+08:00</updated>
   <id>http://cntech.lincank.info/</id>
   <author>
     <name><![CDATA[Guimin Lin/林桂民]]></name>
@@ -82,9 +82,13 @@ cd firmware-mod-kit-read-only/trunk/
 <pre><code>./build_firmware.sh output_directory/ working_directory/
 </code></pre>
 
-<p>其中：
-* <strong>output_directory</strong>: 这是新固件输出文件夹，如果原来里面有东西的话会被覆盖掉
-* <strong>working_directory</strong>: 原来那个被修改的固件所在文件夹</p>
+<p>其中：</p>
+
+<ul>
+<li><strong>output_directory</strong>: 这是新固件输出文件夹，如果原来里面有东西的话会被覆盖掉</li>
+<li><strong>working_directory</strong>: 原来那个被修改的固件所在文件夹</li>
+</ul>
+
 
 <p>它完成后会输出一些信息，其中之一就是<code>free space</code>，这个就是刷了这个固件并启动Jffs时，在Jffs上的可利用空间了。</p>
 ]]></content>
