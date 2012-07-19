@@ -14,7 +14,13 @@
         <loc>
             http://cntech.lincank.info/blog/2012/07/17/some-place-you-should-go-as-a-programmer/
         </loc>
-        <lastmod>2012-07-17T14:23:40+08:00</lastmod>
+        <lastmod>2012-07-17T14:25:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://cntech.lincank.info/blog/2012/07/19/modify-ddwrt-firmware-to-free-space-for-jffs/
+        </loc>
+        <lastmod>2012-07-19T16:31:26+08:00</lastmod>
     </url>
     <url>
         <loc>http://cntech.lincank.info/about/</loc>
@@ -22,10 +28,10 @@
     </url>
     <url>
         <loc>http://cntech.lincank.info/blog/archives/</loc>
-        <lastmod>2012-07-17T14:23:40+08:00</lastmod>
+        <lastmod>2012-07-19T16:31:26+08:00</lastmod>
     </url>
     <url>
         <loc>http://cntech.lincank.info/</loc>
-        <lastmod>2012-07-17T14:23:40+08:00</lastmod>
+        <lastmod>2012-07-19T16:31:26+08:00</lastmod>
     </url>
 </urlset>
