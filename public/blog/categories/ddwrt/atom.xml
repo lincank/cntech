@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ddwrt | Guimin's Blog]]></title>
   <link href="http://cntech.lincank.info/blog/categories/ddwrt/atom.xml" rel="self"/>
   <link href="http://cntech.lincank.info/"/>
-  <updated>2012-09-04T13:49:17+08:00</updated>
+  <updated>2012-09-04T14:36:28+08:00</updated>
   <id>http://cntech.lincank.info/</id>
   <author>
     <name><![CDATA[Guimin Lin/林桂民]]></name>
@@ -19,6 +19,9 @@
     <updated>2012-07-19T12:36:00+08:00</updated>
     <id>http://cntech.lincank.info/blog/2012/07/19/modify-ddwrt-firmware-to-free-space-for-jffs</id>
     <content type="html"><![CDATA[<p>在给自己的Netgear WNDR3400刷dd-wrt固件并实现<a href="https://code.google.com/p/autoddvpn/">autoddvpn</a>的gracemode的时候，遇到一个问题，就是刷完这个固件的时候，8M的空间已经用完。也就是说就算启用了Jffs，这个地方也没任务空间来给你放启动autoddvpn的脚本。先不管Jffs是什么东西，简单来说，就是让ROM的剩余空间可利用，能放一些自己的程序和脚本。把东西放在这里的好处就是路由器断电后你的东西依然在那里，不像RAM里的东西会丢失。前面说过，前面提到我这里用到Jffs主要是放autoddwrt的脚本用的，以实现全自动化。</p>
+
+<!-- more -->
+
 
 <p>在帮WNDR3400刷完ddwrt后发现它里面没空间让我放这些脚本后，我就在网上找有啥办法解决，因为若是每次断电都要手动设置一次的话就太麻烦了。我在网上找到以下两种方法：</p>
 

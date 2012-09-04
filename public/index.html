@@ -113,79 +113,12 @@
 
   <div class="entry-content"><p>在给自己的Netgear WNDR3400刷dd-wrt固件并实现<a href="https://code.google.com/p/autoddvpn/">autoddvpn</a>的gracemode的时候，遇到一个问题，就是刷完这个固件的时候，8M的空间已经用完。也就是说就算启用了Jffs，这个地方也没任务空间来给你放启动autoddvpn的脚本。先不管Jffs是什么东西，简单来说，就是让ROM的剩余空间可利用，能放一些自己的程序和脚本。把东西放在这里的好处就是路由器断电后你的东西依然在那里，不像RAM里的东西会丢失。前面说过，前面提到我这里用到Jffs主要是放autoddwrt的脚本用的，以实现全自动化。</p>
 
-<p>在帮WNDR3400刷完ddwrt后发现它里面没空间让我放这些脚本后，我就在网上找有啥办法解决，因为若是每次断电都要手动设置一次的话就太麻烦了。我在网上找到以下两种方法：</p>
-
-<ul>
-<li>如果你的路由刚好支持USB口的话, 就用U盘或者移动硬盘扩充容量, 这个很容易做到, 因为ddwrt本来就支持USB。但缺点是不是所有路由都支持USB。</li>
-<li>修改固件，把一些你用不到的东西删除，就有多余的空间了。实际上你所要的空间并不是很多，只要几百kb就够用了，只是放几个脚本文件而已。</li>
-</ul>
-
-
-<p>有USB的当然可以选择第一种方法，但其实在我看来第二种方法更加可取，因为它可以让你的autoddvpn离开USB也能使用，更加自成一体。修改固体听起来很玄，但如果有一点Linux基础就够了，只是敲几个命令而已，因为ddwrt官网上就有很详细的<a href="http://www.dd-wrt.com/wiki/index.php/Development">修改固件教程</a>. 英文好的人直接看原文就好了，这里只是方便一下英文苦手:)</p>
-
-<h3>步骤</h3>
-
-<p>在你选定了一个ddwrt固件版本并确保其能够在你的路由器上正常工作后，你就可以进行下列操作来修改固件了，我主要是删除一些没用的模块来释放一些空间给Jffs用。以下操作都是在Ubuntu下进行，你也可以选择其他Linux版本或者Mac OS X。</p>
-
-<h4>先前准备</h4>
-
-<p>Ubuntu下就很简单了，输入以下命令：</p>
-
-<pre><code>sudo apt-get install gcc g++ binutils patch bzip2 flex bison make gettext unzip  zlib1g-dev libc6 subversion
-</code></pre>
-
-<p>再把用来修改固件的程序从SVN上下载下来：</p>
-
-<pre><code>mkdir firmware_mod_kit
-cd firmware_mod_kit
-svn checkout http://firmware-mod-kit.googlecode.com/svn/trunk/ firmware-mod-kit-read-only
-cd firmware-mod-kit-read-only/trunk/
-</code></pre>
-
-<p>这样就准备好了工具。</p>
-
-<h4>抽取固件</h4>
-
-<p>用以下命令把<code>firmware.bin</code>的内容解压到<code>working_directory</code>当中.</p>
-
-<pre><code>./extract_firmware.sh firmware.bin working_directory/
-</code></pre>
-
-<h4>修改固件</h4>
-
-<p>完成上一步后，就可以开始修改固件了。我这里是删除了里面几个没什么用的程序。我不确定自己是对的，所以就不放上来了，以免误导，但我的路由至今已经正常工作几个月了。如果也跟我一样不知道要删除哪里东西，可以像我一样用笨办法：在系统下的<code>bin</code>目录中挑几个，然后Google一下它是干什么用的，你就大概知道你要不要用到这个程序了。你删除多少也取决于你到底要多少空间。</p>
-
-<p>此外也可以用<code>ipkg_install.sh</code>来安装软件包，OpenWrt网站上有很多可以选择的软件包。下载后用以下命令就可以安装：</p>
-
-<pre><code>./ipkg_install.sh some_package-1.2.5.ipk working_directory/
-</code></pre>
-
-<p>其中：</p>
-
-<ul>
-<li><strong>some_package-1.2.5.ipk</strong>: 这是你下载的软件包</li>
-<li><strong>working_directory</strong>: 你解压后的固件所在目录</li>
-</ul>
-
-
-<h4>重新生成固件</h4>
-
-<p>当你完成你想要的之后，就可以生成新的固件了。用以下命令：</p>
-
-<pre><code>./build_firmware.sh output_directory/ working_directory/
-</code></pre>
-
-<p>其中：</p>
-
-<ul>
-<li><strong>output_directory</strong>: 这是新固件输出文件夹，如果原来里面有东西的话会被覆盖掉</li>
-<li><strong>working_directory</strong>: 原来那个被修改的固件所在文件夹</li>
-</ul>
-
-
-<p>它完成后会输出一些信息，其中之一就是<code>free space</code>，这个就是刷了这个固件并启动Jffs时，在Jffs上的可利用空间了。</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/19/modify-ddwrt-firmware-to-free-space-for-jffs/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -233,37 +166,12 @@ cd firmware-mod-kit-read-only/trunk/
 
 <p>鼎鼎大名的技术问答网站，以其答案的高质量著称，如果你的问题能在这上面找到，基本上就有救了！简单来说，在这里你没有一定的Reputation是不能投票的，而你的Reputation主要来自别人投了你的答案。这里有不少大神出没，时不时会遇到框架发布者或语言发明人来回答你的问题！非常推荐！</p>
 
-<h2><a href="www.quora.com">Quora</a></h2>
-
-<p>前Facebook的高层出来搞的一个问答社区，同样也是高质量的。不像StackOverFlow专注于技术问题（从名称就可以看出来），Quora上面的问题的涉及面更广，如创业团队组成，资金操作等。简单说来，在StackOverFlow上，可能是CTO来回答你的问题，而在Quora上，除了CTO外，还可能有CEO和CFO来回答。StackOverFlow与Quora，前者侧重深度，而后者则重广度，所以在何种情况下使用哪个网站，由你的问题决定。</p>
-
-<h2><a href="http://www.github.com">Github</a></h2>
-
-<p>Social Coding的开创者， 现在大量的开源软件都托管在上面。不知道是否因为Git是由Linux的发明者Linus开发的，而促使Git的推广速度要比其他代理管理工具都要快。以前很多在SourceForge上的项目都迁移到Github上来了。因此Github上聚集了全球许多顶尖的程序员，在这上面你可以看到他们开源的代码，并且还能跟他们交流！</p>
-
-<h1>中文网站</h1>
-
-<p>有些中文网站，名气倒是不小，不过上面广告多于内容，用户体验相当差，不去也罢，你知道我说的是哪些。</p>
-
-<h2><a href="http://www.v2ex.com">V2EX</a></h2>
-
-<p>一个程序员、设计者及创意的社区，由于开发者Olivid本身就是国内顶尖的程序员，所以他深知程序员要什么样的交流网站，非常推荐！</p>
-
-<h2><a href="http://www.zhihu.com/">知乎</a></h2>
-
-<p>类似Quora，上面的答案质量也挺高的，不再赘述。</p>
-
-<h2><a href="http://coolshell.cn/">酷壳</a></h2>
-
-<p>这是个由<a href="http://weibo.com/haoel">陈皓</a>维护的技术博客，接受程序员的投稿。上面的文章相当不错，很多都值得一读。</p>
-
-<h2><a href="http://www.douban.com">豆瓣</a></h2>
-
-<p>这个大家应该都知道，除了上面聚集了很多书虫、文艺青年和程序员等。</p>
-
-<p>以后想起来再添加上，感觉漏了哪些却想不起来。</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/17/some-place-you-should-go-as-a-programmer/">Read on &rarr;</a>
+    </footer>
   
 
 
@@ -303,39 +211,12 @@ cd firmware-mod-kit-read-only/trunk/
 
 <p>很多情况下我们要把Iphone上的照片传到Mac上，最原始的方法就是用数据线，或者用其他支持多客户端的网盘，如Dropbox，坚果云等。但就我个人经验来看，直接使用苹果的Icloud的PhotoStream应该是最方便的。</p>
 
-<p>但即便用PhotoStream也有一个问题，就是同步到Mac后要用Iphoto软件获取，只能在这软件里操作。很多情况下你大概跟我一样想在Finder里找到这张照片，以便上传到其他地方，或是用其他软件润色。这时候，你还要从Iphoto里导出来，不甚方便。</p>
-
-<p>本文介绍的方法就是直接在Finder里找到从iOS设备的PhotoStream同步过来的照片，不用额外额外导出。其原理就是，实际上，iPhoto从PhotoStream里获取这些照片的时候已经把他们下载到本地，而文件夹名称都是哈希码，一般情况下很难找到你想要的。这个方法是利用Mac OS自带的搜索功能。</p>
-
-<p>使用本方法前有些基本要求：</p>
-
-<ul>
-<li>Mac OS X 10.7.2以上，并配置了iCloud</li>
-<li>要同步的iOS设备也配置了iClooud，并且开启PhotoStream</li>
-</ul>
-
-
-<h2>具体步骤</h2>
-
-<p>打开iPhoto软件，点PhotoStream刷新一下，让它把PhotoStream里最新的照片下载下来。然后你就可以关掉它了。</p>
-
-<p>1、在Finder里，用快捷键&#8221;Command + Shift + G&#8221;呼出&#8221;Go To Folder&#8221;对话框，输入以下路径：</p>
-
-<pre><code>~/Library/Application Support/iLifeAssetManagement/assets/sub/
-</code></pre>
-
-<p><img src="/images/2012-7-photostream-folder.jpg" alt="PhotoStream Folder" /></p>
-
-<p>2、按&#8221;Command + F&#8221;，在右上方的搜索选择&#8221;Kind:Image&#8221;，也就是搜索图片类型。这时你应该可以在窗口中看到你PhotoStream里的照片了。
-<strong>注意</strong>：不要让搜索范围在&#8221;This Mac&#8221;上，要选当前目录&#8221;sub&#8221;，不然会把本机上所有图片都搜索出来的。</p>
-
-<p><img src="/images/2012-7-image-search.jpg" alt="Image Search" /></p>
-
-<p>3、你当然不希望每次要找这些照片的时候搞这么多操作，可以点&#8221;save&#8221;来保存这次搜索，为它起个名字，如&#8221;PhotoStream&#8221;，再点&#8221;Add To Sidebar&#8221;把它添加到侧边栏。以后只要点侧边栏的&#8221;PhotoStream&#8221;就可以找到PhotoStream里的照片了！当然你还是要用iPhoto来下载PhotoStream里的照片才能在这里找到它们。</p>
-
-<p>大功告成！</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/07/16/access-photo-stream-from-mac-os-finder/">Read on &rarr;</a>
+    </footer>
   
 
 

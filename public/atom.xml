@@ -4,7 +4,7 @@
   <title><![CDATA[Guimin's Blog]]></title>
   <link href="http://cntech.lincank.info/atom.xml" rel="self"/>
   <link href="http://cntech.lincank.info/"/>
-  <updated>2012-09-04T13:49:17+08:00</updated>
+  <updated>2012-09-04T14:36:28+08:00</updated>
   <id>http://cntech.lincank.info/</id>
   <author>
     <name><![CDATA[Guimin Lin/林桂民]]></name>
@@ -19,6 +19,9 @@
     <updated>2012-07-19T12:36:00+08:00</updated>
     <id>http://cntech.lincank.info/blog/2012/07/19/modify-ddwrt-firmware-to-free-space-for-jffs</id>
     <content type="html"><![CDATA[<p>在给自己的Netgear WNDR3400刷dd-wrt固件并实现<a href="https://code.google.com/p/autoddvpn/">autoddvpn</a>的gracemode的时候，遇到一个问题，就是刷完这个固件的时候，8M的空间已经用完。也就是说就算启用了Jffs，这个地方也没任务空间来给你放启动autoddvpn的脚本。先不管Jffs是什么东西，简单来说，就是让ROM的剩余空间可利用，能放一些自己的程序和脚本。把东西放在这里的好处就是路由器断电后你的东西依然在那里，不像RAM里的东西会丢失。前面说过，前面提到我这里用到Jffs主要是放autoddwrt的脚本用的，以实现全自动化。</p>
+
+<!-- more -->
+
 
 <p>在帮WNDR3400刷完ddwrt后发现它里面没空间让我放这些脚本后，我就在网上找有啥办法解决，因为若是每次断电都要手动设置一次的话就太麻烦了。我在网上找到以下两种方法：</p>
 
@@ -111,6 +114,9 @@ cd firmware-mod-kit-read-only/trunk/
 
 <p>鼎鼎大名的技术问答网站，以其答案的高质量著称，如果你的问题能在这上面找到，基本上就有救了！简单来说，在这里你没有一定的Reputation是不能投票的，而你的Reputation主要来自别人投了你的答案。这里有不少大神出没，时不时会遇到框架发布者或语言发明人来回答你的问题！非常推荐！</p>
 
+<!-- more -->
+
+
 <h2><a href="www.quora.com">Quora</a></h2>
 
 <p>前Facebook的高层出来搞的一个问答社区，同样也是高质量的。不像StackOverFlow专注于技术问题（从名称就可以看出来），Quora上面的问题的涉及面更广，如创业团队组成，资金操作等。简单说来，在StackOverFlow上，可能是CTO来回答你的问题，而在Quora上，除了CTO外，还可能有CEO和CFO来回答。StackOverFlow与Quora，前者侧重深度，而后者则重广度，所以在何种情况下使用哪个网站，由你的问题决定。</p>
@@ -151,6 +157,9 @@ cd firmware-mod-kit-read-only/trunk/
     <content type="html"><![CDATA[<p>此帖源自<a href="http://osxdaily.com/2012/05/18/access-ios-photo-stream-from-mac-os-x-finder/">Access the iOS Photo Stream from the Mac OS X Finder</a>，我觉得应该有不少人有这样的需要，所以大致翻译过来方便英文苦手:) 不过本人的系统也是英文的，有些还是保留了英文，因为我实在不知道中文系统里叫什么:P</p>
 
 <p>很多情况下我们要把Iphone上的照片传到Mac上，最原始的方法就是用数据线，或者用其他支持多客户端的网盘，如Dropbox，坚果云等。但就我个人经验来看，直接使用苹果的Icloud的PhotoStream应该是最方便的。</p>
+
+<!-- more -->
+
 
 <p>但即便用PhotoStream也有一个问题，就是同步到Mac后要用Iphoto软件获取，只能在这软件里操作。很多情况下你大概跟我一样想在Finder里找到这张照片，以便上传到其他地方，或是用其他软件润色。这时候，你还要从Iphoto里导出来，不甚方便。</p>
 
