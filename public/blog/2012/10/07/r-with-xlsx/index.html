@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Guimin's Blog</title>
+  <title>R with xlsx - Guimin's Blog</title>
   <meta name="author" content="Guimin Lin/林桂民">
 
   
-  <meta name="description" content="Blog Archive 2012 R with xlsx
-Oct 07 2012 posted in R 修改dd-wrt固件来释放Jffs空间
-Jul 19 2012 posted in autoddvpn, ddwrt 作为一个程序员你应该混迹的地方
-Jul 17 2012 posted &hellip;">
+  <meta name="description" content="R语言在统计学上用得比较多，它是开源的，再配合上做的非常棒的开源IDE&#8211;RStudio，确实是一个很强大的工具。以前在学校的时候用Matlab比较多，但一接触R这个工具，还是觉得非常强大的。 很多时候数据都是以Excel文档的形式出现的，而在CRAN上有一个专门处理xlsx文档的库， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ Jul 17 2012 posted &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cntech.lincank.info/blog/archives/">
+  <link rel="canonical" href="http://cntech.lincank.info/blog/2012/10/07/r-with-xlsx/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -82,84 +79,101 @@ Jul 17 2012 posted &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">R With Xlsx</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-07T21:27:00+08:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>R语言在统计学上用得比较多，它是开源的，再配合上做的非常棒的开源IDE&#8211;<a href="http://rstudio.org/">RStudio</a>，确实是一个很强大的工具。以前在学校的时候用Matlab比较多，但一接触R这个工具，还是觉得非常强大的。</p>
 
-  
-  <h2>2012</h2>
+<p>很多时候数据都是以Excel文档的形式出现的，而在<a href="http://cran.r-project.org/">CRAN</a>上有一个专门处理xlsx文档的库，就叫<code>xlsx</code>。</p>
 
-<article>
-  
-<h1><a href="/blog/2012/10/07/r-with-xlsx/">R with xlsx</a></h1>
-<time datetime="2012-10-07T21:27:00+08:00" pubdate><span class='month'>Oct</span> <span class='day'>07</span> <span class='year'>2012</span></time>
+<p>下面是我帮朋友写的一个用来合并多个格式一样的xlsx文档的。可看看<code>xlsx</code>这个库的基本用法。第一次用R，写的不算太好，大家将就一下，抛砖引玉:)</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/r/'>R</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/19/modify-ddwrt-firmware-to-free-space-for-jffs/">修改dd-wrt固件来释放Jffs空间</a></h1>
-<time datetime="2012-07-19T12:36:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>19</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/autoddvpn/'>autoddvpn</a>, <a class='category' href='/blog/categories/ddwrt/'>ddwrt</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/17/some-place-you-should-go-as-a-programmer/">作为一个程序员你应该混迹的地方</a></h1>
-<time datetime="2012-07-17T11:56:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>17</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/coding/'>coding</a>, <a class='category' href='/blog/categories/program/'>program</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/07/16/access-photo-stream-from-mac-os-finder/">从Mac OS Finder获取Photo Stream里的照片</a></h1>
-<time datetime="2012-07-16T11:40:00+08:00" pubdate><span class='month'>Jul</span> <span class='day'>16</span> <span class='year'>2012</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/06/29/hello-world/">Hello World</a></h1>
-<time datetime="2012-06-29T18:34:00+08:00" pubdate><span class='month'>Jun</span> <span class='day'>29</span> <span class='year'>2012</span></time>
-
-
-</article>
-
+<p>代码可以在<a href="https://gist.github.com/3847275">Github</a>上找到，我在Windows跟Mac下测试过没问题，Linux虽然没测但相信也应该没问题的。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Guimin Lin/林桂民</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-07T21:27:00+08:00" pubdate data-updated="true">Oct 7<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/r/'>R</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cntech.lincank.info/blog/2012/10/07/r-with-xlsx/" data-via="lincank" data-counturl="http://cntech.lincank.info/blog/2012/10/07/r-with-xlsx/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/19/modify-ddwrt-firmware-to-free-space-for-jffs/" title="Previous Post: 修改dd-wrt固件来释放Jffs空间">&laquo; 修改dd-wrt固件来释放Jffs空间</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -294,7 +308,10 @@ Jul 17 2012 posted &hellip;">
       var disqus_shortname = 'cntechblog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://cntech.lincank.info/blog/2012/10/07/r-with-xlsx/';
+        var disqus_url = 'http://cntech.lincank.info/blog/2012/10/07/r-with-xlsx/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
