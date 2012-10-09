@@ -12,6 +12,8 @@ R语言在统计学上用得比较多，它是开源的，再配合上做的非�
 
 下面是我帮朋友写的一个用来合并多个格式一样的xlsx文档的。可看看`xlsx`这个库的基本用法。第一次用R，写的不算太好，大家将就一下，抛砖引玉:)
 
+<!-- more -->
+
 代码可以在[Github](https://gist.github.com/3847275)上找到，我在Windows跟Mac下测试过没问题，Linux虽然没测但相信也应该没问题的。
 
-
+<script src="https://gist.github.com/3847275.js"> </script>

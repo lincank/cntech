@@ -4,7 +4,7 @@
   <title><![CDATA[Category: R | Guimin's Blog]]></title>
   <link href="http://cntech.lincank.info/blog/categories/r/atom.xml" rel="self"/>
   <link href="http://cntech.lincank.info/"/>
-  <updated>2012-10-07T21:56:50+08:00</updated>
+  <updated>2012-10-09T11:27:30+08:00</updated>
   <id>http://cntech.lincank.info/</id>
   <author>
     <name><![CDATA[Guimin Lin/林桂民]]></name>
@@ -24,7 +24,13 @@
 
 <p>下面是我帮朋友写的一个用来合并多个格式一样的xlsx文档的。可看看<code>xlsx</code>这个库的基本用法。第一次用R，写的不算太好，大家将就一下，抛砖引玉:)</p>
 
+<!-- more -->
+
+
 <p>代码可以在<a href="https://gist.github.com/3847275">Github</a>上找到，我在Windows跟Mac下测试过没问题，Linux虽然没测但相信也应该没问题的。</p>
+
+<script src="https://gist.github.com/3847275.js"> </script>
+
 ]]></content>
   </entry>
   
