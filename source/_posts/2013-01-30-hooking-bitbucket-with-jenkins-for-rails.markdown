@@ -10,7 +10,7 @@ categories: bitbucket jenkins rails ci centos
 
 本文针对的环境是Jenkins 1.5, Centos 6.2, Rails 3。这里我结合自己基本上从零开始在Centos上部署Jenkins，的过程给个参考。此过程多少有些坑，不过网上搜搜基本能解决。不同环境可能有些差异，主要目的还是抛砖引玉:)
 
-这里CI server选的是Jenkins，其他用得比较多的有像[CruiseControl](http://cruisecontrol.sourceforge.net/)和TeamCity等。选Jenkins主要是它现在用得比较多，社区比较活跃，各种你能想到或想不到的插件都有~lol
+这里CI server选的是Jenkins，其他用得比较多的有像[CruiseControl](http://cruisecontrol.sourceforge.net/)和[TeamCity](http://www.jetbrains.com/teamcity/)等。选Jenkins主要是它现在用得比较多，社区比较活跃，各种你能想到或想不到的插件都有~lol
 
 跟Github的集成不必多说，网上有很多，相信大家使用Bitbucket的原因，大概跟我一样：是它的私有库是免费的，而且是逆天的unlimited!!，不用都对不住人家了:P 
 
